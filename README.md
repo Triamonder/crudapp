@@ -1,6 +1,6 @@
 # Single page app in Vue JS
 
-Application can be used for CRUD of simple item. After opening app in brobser, go to /list where you can create new item. Each of items includes 'title', 'body' and checkbox for 'important' mode.
+Application can be used for CRUD of simple item. After opening app in browser, go to /list where you can create new item. Each of items includes 'title', 'body' and checkbox for 'important' mode.
 
 ## Project download
 
