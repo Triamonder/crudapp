@@ -27,7 +27,6 @@ export default new Vuex.Store({
     updateItem(state, item) {
       const itemIndex = state.items.map(item => item.id).indexOf(item.id);
       state.items[itemIndex] = item;
-      console.log(state.items);
     },
     removeItem(state, id) {
       const itemIndex = state.items.map(item => item.id).indexOf(id);

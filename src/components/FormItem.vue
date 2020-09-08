@@ -45,7 +45,6 @@ export default {
   },
   mounted() {
     if (this.isEditing && this.item) {
-      console.log(this.item);
       this.id = this.item.id;
       this.title = this.item.title;
       this.body = this.item.body;
