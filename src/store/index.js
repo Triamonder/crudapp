@@ -8,7 +8,12 @@ Vue.use(VueLodash, { lodash: lodash });
 
 export default new Vuex.Store({
   state: {
-    items: [],
+    items: [
+      { id: 1, title: "Title 1", body: "Body 1", isImportant: true },
+      { id: 2, title: "Title 2", body: "Body 2", isImportant: false },
+      { id: 3, title: "Title 3", body: "Body 3", isImportant: true },
+      { id: 4, title: "Title 4", body: "Body 4", isImportant: false },
+    ],
     reverseSort: false,
   },
   mutations: {
