@@ -8,9 +8,9 @@
         <b-input v-model="body" required></b-input>
       </b-field>
       <b-field>
-        <b-checkbox v-model="isImportant" :value="isImportant"
-          >Important</b-checkbox
-        >
+        <b-checkbox v-model="isImportant" :value="isImportant">
+          Important
+        </b-checkbox>
       </b-field>
       <b-button native-type="submit" type="is-primary">{{
         isEditing ? "Update" : "Create"
@@ -27,21 +27,21 @@ export default {
   props: {
     item: Object,
     isEditing: Boolean,
-    itemId: Number,
+    itemId: Number
   },
   data() {
     return {
       id: 0,
       title: "",
       body: "",
-      isImportant: false,
+      isImportant: false
     };
   },
   validations: {
     form: {
       title: { min: minLength(4), max: maxLength(80) },
-      body: { min: minLength(4), max: maxLength(200) },
-    },
+      body: { min: minLength(4), max: maxLength(200) }
+    }
   },
   mounted() {
     if (this.isEditing && this.item) {
@@ -65,10 +65,10 @@ export default {
         id: this.id,
         title: this.title,
         body: this.body,
-        isImportant: this.isImportant,
+        isImportant: this.isImportant
       });
       this.clearForm();
-    },
-  },
+    }
+  }
 };
 </script>

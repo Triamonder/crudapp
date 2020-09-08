@@ -12,9 +12,9 @@ export default new Vuex.Store({
       { id: 1, title: "Title 1", body: "Body 1", isImportant: true },
       { id: 2, title: "Title 2", body: "Body 2", isImportant: false },
       { id: 3, title: "Title 3", body: "Body 3", isImportant: true },
-      { id: 4, title: "Title 4", body: "Body 4", isImportant: false },
+      { id: 4, title: "Title 4", body: "Body 4", isImportant: false }
     ],
-    reverseSort: false,
+    reverseSort: false
   },
   mutations: {
     addNewItem(state, item) {
@@ -25,22 +25,22 @@ export default new Vuex.Store({
       state.items.push(item);
     },
     updateItem(state, item) {
-      const itemIndex = state.items.map((item) => item.id).indexOf(item.id);
+      const itemIndex = state.items.map(item => item.id).indexOf(item.id);
       state.items[itemIndex] = item;
       console.log(state.items);
     },
     removeItem(state, id) {
-      const itemIndex = state.items.map((item) => item.id).indexOf(id);
+      const itemIndex = state.items.map(item => item.id).indexOf(id);
       state.items.splice(itemIndex, 1);
     },
     reverseSort(state) {
       state.reverseSort = !state.reverseSort;
-    },
+    }
   },
   getters: {
     getItems(state) {
       return state.items;
-    },
+    }
   },
-  actions: {},
+  actions: {}
 });

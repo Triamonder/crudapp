@@ -15,26 +15,25 @@ import formItem from "@/components/FormItem";
 export default {
   name: "List",
   components: {
-    formItem,
+    formItem
   },
   data() {
     return {
-      isEditing: true,
+      isEditing: true
     };
   },
   methods: {
     updateItem(item) {
-      console.log(item);
       this.$store.commit("updateItem", item);
       this.$router.push({ path: "/list" });
-    },
+    }
   },
   computed: {
     getEditingItem() {
       return this.$store.getters.getItems.find(
-        (item) => item.id === this.$route.params.id
+        item => item.id === this.$route.params.id
       );
-    },
-  },
+    }
+  }
 };
 </script>

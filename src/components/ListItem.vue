@@ -4,11 +4,13 @@
     <div class="item__body">{{ body }}</div>
     <div class="buttons">
       <router-link :to="{ name: 'Detail', params: { id: id } }">
-        <b-button type="is-warning is-light">Edit</b-button>
+        <b-button type="is-warning is-light">
+          Edit
+        </b-button>
       </router-link>
-      <b-button @click.prevent="removeItem(id)" type="is-danger is-light"
-        >Remove</b-button
-      >
+      <b-button @click.prevent="removeItem(id)" type="is-danger is-light">
+        Remove
+      </b-button>
     </div>
   </b-message>
 </template>
@@ -20,12 +22,12 @@ export default {
     id: Number,
     title: String,
     body: String,
-    isImportant: Boolean,
+    isImportant: Boolean
   },
   methods: {
     removeItem(id) {
       this.$store.commit("removeItem", id);
-    },
-  },
+    }
+  }
 };
 </script>

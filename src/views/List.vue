@@ -35,19 +35,19 @@ export default {
   name: "List",
   components: {
     formItem,
-    listItem,
+    listItem
   },
   data() {
     return {
       isEditing: false,
       items: [{ title: "title 1", body: "body 1", isImportant: "1" }],
-      reverseSort: false,
+      reverseSort: false
     };
   },
   methods: {
     saveItem(item) {
       this.$store.commit("addNewItem", item);
-    },
+    }
   },
   computed: {
     getItems() {
@@ -56,7 +56,7 @@ export default {
         "title",
         this.reverseSort ? "desc" : "asc"
       );
-    },
-  },
+    }
+  }
 };
 </script>
